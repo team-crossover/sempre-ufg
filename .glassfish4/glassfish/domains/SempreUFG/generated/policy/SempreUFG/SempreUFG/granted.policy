@@ -1,0 +1,35 @@
+/* AUTOMATICALLY GENERATED ON Wed May 30 09:14:19 BRT 2018*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.WebResourcePermission "/view/usuario/*", "!GET,POST";
+  permission javax.security.jacc.WebResourcePermission "/view/gestor/*", "!GET,POST";
+  permission javax.security.jacc.WebResourcePermission "/:/view/usuario/*:/view/gestor/*";
+  permission javax.security.jacc.WebUserDataPermission "/:/view/usuario/*:/view/gestor/*";
+  permission javax.security.jacc.WebUserDataPermission "/view/usuario/*";
+  permission javax.security.jacc.WebUserDataPermission "/view/gestor/*";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "**";
+  permission javax.security.jacc.WebRoleRefPermission "", "**";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "**";
+  permission javax.security.jacc.WebRoleRefPermission "default", "**";
+};
+
+grant      principal org.glassfish.security.common.Group "gestor" {
+  permission javax.security.jacc.WebResourcePermission "/view/gestor/*", "GET,POST";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "gestor";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "gestor";
+  permission javax.security.jacc.WebRoleRefPermission "default", "gestor";
+  permission javax.security.jacc.WebRoleRefPermission "", "gestor";
+};
+
+grant      principal org.glassfish.security.common.Group "usuario" {
+  permission javax.security.jacc.WebResourcePermission "/view/usuario/*", "GET,POST";
+  permission javax.security.jacc.WebRoleRefPermission "", "usuario";
+  permission javax.security.jacc.WebRoleRefPermission "default", "usuario";
+  permission javax.security.jacc.WebRoleRefPermission "Faces Servlet", "usuario";
+  permission javax.security.jacc.WebRoleRefPermission "jsp", "usuario";
+};
+

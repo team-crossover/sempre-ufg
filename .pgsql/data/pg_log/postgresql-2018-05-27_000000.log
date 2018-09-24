@@ -1,0 +1,26 @@
+2018-05-27 06:54:58 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 06:54:58 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (EMAIL VARCHAR(255) NOT NULL, CPF VARCHAR(11), NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, SENHA VARCHAR(32) NOT NULL, PRIMARY KEY (EMAIL))
+2018-05-27 06:54:58 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 06:54:58 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (EMAIL VARCHAR(255) NOT NULL, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (EMAIL))
+2018-05-27 07:11:23 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 07:11:23 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (EMAIL VARCHAR(255) NOT NULL, CPF VARCHAR(11), NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, SENHA VARCHAR(32) NOT NULL, PRIMARY KEY (EMAIL))
+2018-05-27 07:11:23 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 07:11:23 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (EMAIL VARCHAR(255) NOT NULL, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (EMAIL))
+2018-05-27 07:58:55 BRT sempreufg sempreufg LOG:  could not send data to client: Connection reset by peer
+2018-05-27 07:58:55 BRT sempreufg sempreufg FATAL:  connection to client lost
+2018-05-27 08:00:51 BRT sempreufg sempreufg ERROR:  relation "papel" does not exist at character 26
+2018-05-27 08:00:51 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL, PAPEL FROM PAPEL WHERE (EMAIL = $1)
+2018-05-27 08:04:00 BRT sempreufg sempreufg ERROR:  table "papel" does not exist
+2018-05-27 08:04:00 BRT sempreufg sempreufg STATEMENT:  DROP TABLE PAPEL CASCADE
+2018-05-27 08:04:01 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 19
+2018-05-27 08:04:01 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL FROM USUARIO WHERE EMAIL <> EMAIL
+2018-05-27 08:04:01 BRT sempreufg sempreufg ERROR:  relation "papel" does not exist at character 19
+2018-05-27 08:04:01 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL FROM PAPEL WHERE EMAIL <> EMAIL
+2018-05-27 08:10:11 BRT sempreufg sempreufg ERROR:  prepared statement "S_1" does not exist
+2018-05-27 08:10:15 BRT sempreufg sempreufg ERROR:  prepared statement "S_1" does not exist
+2018-05-27 08:10:15 BRT sempreufg sempreufg LOG:  could not receive data from client: Connection reset by peer
+2018-05-27 08:37:50 BRT   LOG:  received fast shutdown request
+2018-05-27 08:37:50 BRT   LOG:  aborting any active transactions
+2018-05-27 08:37:50 BRT   LOG:  autovacuum launcher shutting down
+2018-05-27 08:37:50 BRT   LOG:  shutting down
+2018-05-27 08:37:50 BRT   LOG:  database system is shut down

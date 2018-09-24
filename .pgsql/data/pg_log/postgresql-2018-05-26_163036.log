@@ -1,0 +1,73 @@
+2018-05-26 16:30:36 BRT   LOG:  database system was interrupted; last known up at 2018-05-26 16:04:56 BRT
+2018-05-26 16:30:36 BRT   LOG:  database system was not properly shut down; automatic recovery in progress
+2018-05-26 16:30:36 BRT   LOG:  redo starts at 0/183FD88
+2018-05-26 16:30:36 BRT   LOG:  record with zero length at 0/1840250
+2018-05-26 16:30:36 BRT   LOG:  redo done at 0/1840220
+2018-05-26 16:30:36 BRT   LOG:  last completed transaction was at log time 2018-05-26 16:05:33.233846-03
+2018-05-26 16:30:37 BRT   LOG:  database system is ready to accept connections
+2018-05-26 16:30:37 BRT   LOG:  autovacuum launcher started
+2018-05-26 18:48:56 BRT sempreufg sempreufg ERROR:  column "cpf" contains null values
+2018-05-26 18:48:56 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD CPF VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 18:49:45 BRT sempreufg sempreufg ERROR:  column "cpf" contains null values
+2018-05-26 18:49:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD CPF VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 18:49:45 BRT sempreufg sempreufg ERROR:  column "email" contains null values
+2018-05-26 18:49:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD EMAIL VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 18:49:45 BRT sempreufg sempreufg ERROR:  column "senha" contains null values
+2018-05-26 18:49:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD SENHA VARCHAR(255) NOT NULL 
+2018-05-26 18:50:23 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 18:50:23 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:01:41 BRT sempreufg sempreufg ERROR:  column "cpf" contains null values
+2018-05-26 19:01:41 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD CPF VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 19:01:41 BRT sempreufg sempreufg ERROR:  column "email" contains null values
+2018-05-26 19:01:41 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD EMAIL VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 19:01:41 BRT sempreufg sempreufg ERROR:  column "senha" contains null values
+2018-05-26 19:01:41 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD SENHA VARCHAR(255) NOT NULL 
+2018-05-26 19:02:56 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:02:56 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:34:02 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:34:02 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:34:20 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:34:20 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:35:45 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:35:45 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:37:00 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-26 19:37:00 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(255) NOT NULL UNIQUE, EMAIL VARCHAR(255) NOT NULL UNIQUE, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, SENHA VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-26 19:41:45 BRT sempreufg sempreufg ERROR:  column "cpf" contains null values
+2018-05-26 19:41:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD CPF VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 19:41:45 BRT sempreufg sempreufg ERROR:  column "email" contains null values
+2018-05-26 19:41:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD EMAIL VARCHAR(255) NOT NULL UNIQUE 
+2018-05-26 19:41:45 BRT sempreufg sempreufg ERROR:  column "senha" contains null values
+2018-05-26 19:41:45 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD SENHA VARCHAR(255) NOT NULL 
+2018-05-26 19:42:12 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:42:12 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:44:46 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:44:46 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:50:16 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:50:16 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 19:54:23 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 19:54:23 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 20:10:57 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 20:10:57 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 20:13:06 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-26 20:13:06 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(255) NOT NULL UNIQUE, EMAIL VARCHAR(255) NOT NULL UNIQUE, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, SENHA VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-26 20:13:06 BRT sempreufg sempreufg ERROR:  relation "sequence" already exists
+2018-05-26 20:13:06 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+2018-05-26 20:13:06 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "sequence_pkey"
+2018-05-26 20:13:06 BRT sempreufg sempreufg DETAIL:  Key (seq_name)=(SEQ_GEN) already exists.
+2018-05-26 20:13:06 BRT sempreufg sempreufg STATEMENT:  INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+2018-05-26 20:13:12 BRT sempreufg sempreufg ERROR:  column "cpf" does not exist at character 12
+2018-05-26 20:13:12 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-26 20:17:07 BRT sempreufg sempreufg ERROR:  table "usuario" does not exist
+2018-05-26 20:17:07 BRT sempreufg sempreufg STATEMENT:  DROP TABLE USUARIO CASCADE
+2018-05-26 20:17:07 BRT sempreufg sempreufg ERROR:  relation "sequence" does not exist at character 13
+2018-05-26 20:17:07 BRT sempreufg sempreufg STATEMENT:  DELETE FROM SEQUENCE WHERE SEQ_NAME = 'SEQ_GEN'
+2018-05-26 20:17:12 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 16
+2018-05-26 20:17:12 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-26 20:17:12 BRT sempreufg sempreufg ERROR:  relation "sequence" does not exist at character 22
+2018-05-26 20:17:12 BRT sempreufg sempreufg STATEMENT:  SELECT SEQ_NAME FROM SEQUENCE WHERE SEQ_NAME <> SEQ_NAME
+2018-05-26 21:17:28 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-26 21:17:28 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (EMAIL VARCHAR(255) NOT NULL, CPF VARCHAR(11), NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, SENHA VARCHAR(32) NOT NULL, PRIMARY KEY (EMAIL))
+2018-05-26 22:56:08 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 19
+2018-05-26 22:56:08 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL FROM USUARIO WHERE EMAIL <> EMAIL
+2018-05-26 22:56:08 BRT sempreufg sempreufg ERROR:  relation "papel" does not exist at character 19
+2018-05-26 22:56:08 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL FROM PAPEL WHERE EMAIL <> EMAIL

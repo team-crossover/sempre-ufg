@@ -1,0 +1,25 @@
+2018-05-26 04:07:00 BRT   LOG:  database system was shut down at 2018-05-26 04:06:59 BRT
+2018-05-26 04:07:00 BRT   LOG:  database system is ready to accept connections
+2018-05-26 04:07:00 BRT   LOG:  autovacuum launcher started
+2018-05-26 04:07:13 BRT postgres postgres FATAL:  password authentication failed for user "postgres"
+2018-05-26 04:07:21 BRT sempreufg sempreufg FATAL:  database "sempreufg" does not exist
+2018-05-26 04:08:21 BRT [unknown] [unknown] LOG:  invalid length of startup packet
+2018-05-26 04:08:38 BRT [unknown] [unknown] LOG:  invalid length of startup packet
+2018-05-26 04:11:05 BRT postgres postgres FATAL:  password authentication failed for user "postgres"
+2018-05-26 04:12:02 BRT sempreufg postgres FATAL:  password authentication failed for user "postgres"
+2018-05-26 04:12:08 BRT sempreufg postgres FATAL:  database "sempreufg" does not exist
+2018-05-26 04:12:53 BRT sempreufg_db postgres ERROR:  syntax error at or near "sudo" at character 1
+2018-05-26 04:12:53 BRT sempreufg_db postgres STATEMENT:  sudo -u postgres createdb sempreufg
+	;
+2018-05-26 04:15:04 BRT postgres postgres ERROR:  role "sempreufg" does not exist
+2018-05-26 04:15:04 BRT postgres postgres STATEMENT:  drop user sempreufg;
+2018-05-26 04:15:10 BRT postgres postgres ERROR:  role "sempreufg" does not exist
+2018-05-26 04:15:10 BRT postgres postgres STATEMENT:  drop user "sempreufg";
+2018-05-26 04:15:26 BRT postgres postgres FATAL:  password authentication failed for user "postgres"
+2018-05-26 04:15:43 BRT postgres postgres ERROR:  syntax error at or near "'sempreUfg'" at character 11
+2018-05-26 04:15:43 BRT postgres postgres STATEMENT:  drop user 'sempreUfg';
+2018-05-26 04:20:26 BRT   LOG:  received fast shutdown request
+2018-05-26 04:20:26 BRT   LOG:  aborting any active transactions
+2018-05-26 04:20:26 BRT   LOG:  autovacuum launcher shutting down
+2018-05-26 04:20:26 BRT   LOG:  shutting down
+2018-05-26 04:20:26 BRT   LOG:  database system is shut down

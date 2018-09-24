@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+	padding: 10px;	
+}
+
+body.short-centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 360px;
+}
+
+body.medium-centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+
+body.large-centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+
+label {
+	margin-bottom: 0;
+}}

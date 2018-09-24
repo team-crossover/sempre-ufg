@@ -1,0 +1,102 @@
+2018-05-27 08:37:51 BRT   LOG:  database system was shut down at 2018-05-27 08:37:50 BRT
+2018-05-27 08:37:51 BRT   LOG:  database system is ready to accept connections
+2018-05-27 08:37:51 BRT   LOG:  autovacuum launcher started
+2018-05-27 09:09:18 BRT sempreufg sempreufg ERROR:  value too long for type character varying(32)
+2018-05-27 09:09:18 BRT sempreufg sempreufg STATEMENT:  UPDATE "public"."usuario" SET "email"='nelson', "cpf"='', "nome"='', "recebedivulgacao"=NULL, "senha"='NTk5NDQ3MUFCQjAxMTEyQUZDQzE4MTU5RjZDQzc0QjRGNTExQjk5ODA2REE1OUIzQ0FGNUE5QzE3M0NBQ0ZDNQ==' WHERE "email"='nelson'
+2018-05-27 09:09:48 BRT sempreufg sempreufg ERROR:  value too long for type character varying(32)
+2018-05-27 09:09:48 BRT sempreufg sempreufg STATEMENT:  UPDATE "public"."usuario" SET "email"='nelson', "cpf"='', "nome"='', "recebedivulgacao"=NULL, "senha"='35393934343731414242303131313241464343313831353946364343373442344635313142393938303644413539423343414635413943313733434143464335' WHERE "email"='nelson'
+2018-05-27 09:11:42 BRT sempreufg sempreufg ERROR:  cached plan must not change result type
+2018-05-27 09:11:42 BRT sempreufg sempreufg STATEMENT:  SELECT EMAIL, CPF, NOME, RECEBEDIVULGACAO, SENHA FROM USUARIO
+2018-05-27 17:28:02 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-27 17:28:02 BRT sempreufg sempreufg STATEMENT:  UPDATE USUARIO SET CPF = $1, RECEBEDIVULGACAO = $2 WHERE (EMAIL = $3)
+2018-05-27 17:28:02 BRT sempreufg sempreufg ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2018-05-27 17:28:02 BRT sempreufg sempreufg STATEMENT:  SELECT 1
+2018-05-27 17:45:08 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-27 17:45:08 BRT sempreufg sempreufg STATEMENT:  UPDATE USUARIO SET CPF = $1 WHERE (EMAIL = $2)
+2018-05-27 17:45:54 BRT sempreufg sempreufg ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2018-05-27 17:45:54 BRT sempreufg sempreufg STATEMENT:  BEGIN
+2018-05-27 17:45:54 BRT sempreufg sempreufg LOG:  could not receive data from client: Connection reset by peer
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(11), EMAIL VARCHAR(255) NOT NULL UNIQUE, senha VARCHAR(255) NOT NULL, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, PRIMARY KEY (ID))
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD ID BIGINT NOT NULL 
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM PAPEL WHERE ID <> ID
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (ID BIGINT NOT NULL, EMAIL VARCHAR(255) NOT NULL UNIQUE, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-27 18:14:47 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:14:47 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE PAPEL ADD ID BIGINT NOT NULL 
+2018-05-27 18:15:35 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:15:35 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, senha, NOME, RECEBEDIVULGACAO FROM USUARIO WHERE (EMAIL = $1)
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(11), EMAIL VARCHAR(255) NOT NULL UNIQUE, senha VARCHAR(255) NOT NULL, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, PRIMARY KEY (ID))
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD ID BIGINT NOT NULL 
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM PAPEL WHERE ID <> ID
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (ID BIGINT NOT NULL, EMAIL VARCHAR(255) NOT NULL UNIQUE, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-27 18:16:33 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:16:33 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE PAPEL ADD ID BIGINT NOT NULL 
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(11), EMAIL VARCHAR(255) NOT NULL UNIQUE, senha VARCHAR(255) NOT NULL, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, PRIMARY KEY (ID))
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE USUARIO ADD ID BIGINT NOT NULL 
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM PAPEL WHERE ID <> ID
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (ID BIGINT NOT NULL, EMAIL VARCHAR(255) NOT NULL UNIQUE, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-27 18:16:52 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:16:52 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE PAPEL ADD ID BIGINT NOT NULL 
+2018-05-27 18:17:05 BRT sempreufg sempreufg ERROR:  column "id" does not exist at character 8
+2018-05-27 18:17:05 BRT sempreufg sempreufg STATEMENT:  SELECT ID, CPF, EMAIL, senha, NOME, RECEBEDIVULGACAO FROM USUARIO WHERE (EMAIL = $1)
+2018-05-27 18:19:53 BRT sempreufg sempreufg ERROR:  column "id" contains null values
+2018-05-27 18:19:53 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE "public"."usuario" ADD COLUMN "id" bigint NOT NULL
+2018-05-27 18:23:49 BRT sempreufg sempreufg ERROR:  column "spclocation" does not exist at character 67
+2018-05-27 18:23:49 BRT sempreufg sempreufg STATEMENT:  SELECT spcname, pg_catalog.pg_get_userbyid(spcowner) AS spcowner, spclocation,
+	                    (SELECT description FROM pg_catalog.pg_shdescription pd WHERE pg_tablespace.oid=pd.objoid) AS spccomment
+						FROM pg_catalog.pg_tablespace ORDER BY spcname
+2018-05-27 18:24:00 BRT sempreufg sempreufg ERROR:  column "spclocation" does not exist at character 67
+2018-05-27 18:24:00 BRT sempreufg sempreufg STATEMENT:  SELECT spcname, pg_catalog.pg_get_userbyid(spcowner) AS spcowner, spclocation,
+	                    (SELECT description FROM pg_catalog.pg_shdescription pd WHERE pg_tablespace.oid=pd.objoid) AS spccomment
+						FROM pg_catalog.pg_tablespace ORDER BY spcname
+2018-05-27 18:24:31 BRT sempreufg sempreufg ERROR:  column "spclocation" does not exist at character 67
+2018-05-27 18:24:31 BRT sempreufg sempreufg STATEMENT:  SELECT spcname, pg_catalog.pg_get_userbyid(spcowner) AS spcowner, spclocation,
+	                    (SELECT description FROM pg_catalog.pg_shdescription pd WHERE pg_tablespace.oid=pd.objoid) AS spccomment
+						FROM pg_catalog.pg_tablespace WHERE spcname NOT LIKE $$pg\_%$$ ORDER BY spcname
+2018-05-27 18:24:47 BRT sempreufg sempreufg ERROR:  column "spclocation" does not exist at character 67
+2018-05-27 18:24:47 BRT sempreufg sempreufg STATEMENT:  SELECT spcname, pg_catalog.pg_get_userbyid(spcowner) AS spcowner, spclocation,
+	                    (SELECT description FROM pg_catalog.pg_shdescription pd WHERE pg_tablespace.oid=pd.objoid) AS spccomment
+						FROM pg_catalog.pg_tablespace WHERE spcname NOT LIKE $$pg\_%$$ ORDER BY spcname
+2018-05-27 18:26:21 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-27 18:26:21 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE USUARIO (ID BIGINT NOT NULL, CPF VARCHAR(11), EMAIL VARCHAR(255) NOT NULL UNIQUE, senha VARCHAR(255) NOT NULL, NOME VARCHAR(255), RECEBEDIVULGACAO BOOLEAN, PRIMARY KEY (ID))
+2018-05-27 18:26:21 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-27 18:26:21 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE PAPEL (ID BIGINT NOT NULL, EMAIL VARCHAR(255) NOT NULL UNIQUE, PAPEL VARCHAR(255) NOT NULL, PRIMARY KEY (ID))
+2018-05-27 18:26:21 BRT sempreufg sempreufg ERROR:  relation "sequence" already exists
+2018-05-27 18:26:21 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+2018-05-27 18:26:21 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "sequence_pkey"
+2018-05-27 18:26:21 BRT sempreufg sempreufg DETAIL:  Key (seq_name)=(SEQ_GEN) already exists.
+2018-05-27 18:26:21 BRT sempreufg sempreufg STATEMENT:  INSERT INTO SEQUENCE(SEQ_NAME, SEQ_COUNT) values ('SEQ_GEN', 0)
+2018-05-27 18:37:43 BRT sempreufg sempreufg ERROR:  table "usuario" does not exist
+2018-05-27 18:37:43 BRT sempreufg sempreufg STATEMENT:  DROP TABLE USUARIO CASCADE
+2018-05-27 18:37:43 BRT sempreufg sempreufg ERROR:  table "papel" does not exist
+2018-05-27 18:37:43 BRT sempreufg sempreufg STATEMENT:  DROP TABLE PAPEL CASCADE
+2018-05-27 18:37:47 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 16
+2018-05-27 18:37:47 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-27 18:37:47 BRT sempreufg sempreufg ERROR:  relation "papel" does not exist at character 16
+2018-05-27 18:37:47 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM PAPEL WHERE ID <> ID
+2018-05-27 20:11:04 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 16
+2018-05-27 20:11:04 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
+2018-05-27 20:12:42 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-27 20:12:42 BRT sempreufg sempreufg STATEMENT:  INSERT INTO "public"."usuario" ("id","cpf","email","senha","nome","recebedivulgacao")
+						VALUES ('2','234567890123','aluno@aluno.com','WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=','Aluno Qualquer',TRUE)
+2018-05-27 20:12:47 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-27 20:12:47 BRT sempreufg sempreufg STATEMENT:  INSERT INTO "public"."usuario" ("id","cpf","email","senha","nome","recebedivulgacao")
+						VALUES ('2','234567890123','aluno@aluno.com','WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=','Aluno Qualquer',TRUE)
+2018-05-27 20:30:54 BRT   WARNING:  pgstat wait timeout

@@ -1,0 +1,10 @@
+2018-05-28 19:02:46 BRT   LOG:  database system was interrupted; last known up at 2018-05-28 18:32:31 BRT
+2018-05-28 19:02:46 BRT   LOG:  database system was not properly shut down; automatic recovery in progress
+2018-05-28 19:02:46 BRT postgres postgres FATAL:  the database system is starting up
+2018-05-28 19:02:46 BRT   LOG:  redo starts at 0/1BE5068
+2018-05-28 19:02:46 BRT   LOG:  record with zero length at 0/1BE6090
+2018-05-28 19:02:46 BRT   LOG:  redo done at 0/1BE6060
+2018-05-28 19:02:46 BRT   LOG:  last completed transaction was at log time 2018-05-28 18:32:41.205015-03
+2018-05-28 19:02:47 BRT postgres postgres FATAL:  the database system is starting up
+2018-05-28 19:02:47 BRT   LOG:  database system is ready to accept connections
+2018-05-28 19:02:47 BRT   LOG:  autovacuum launcher started

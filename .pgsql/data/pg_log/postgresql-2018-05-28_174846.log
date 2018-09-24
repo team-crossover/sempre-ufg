@@ -1,0 +1,11 @@
+2018-05-28 17:48:46 BRT   LOG:  database system was interrupted; last known up at 2018-05-28 00:07:48 BRT
+2018-05-28 17:48:46 BRT   LOG:  database system was not properly shut down; automatic recovery in progress
+2018-05-28 17:48:47 BRT postgres postgres FATAL:  the database system is starting up
+2018-05-28 17:48:47 BRT   LOG:  record with zero length at 0/1BE2ED8
+2018-05-28 17:48:47 BRT   LOG:  redo is not required
+2018-05-28 17:48:47 BRT   LOG:  database system is ready to accept connections
+2018-05-28 17:48:47 BRT   LOG:  autovacuum launcher started
+2018-05-28 17:55:43 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-28 17:55:43 BRT sempreufg sempreufg STATEMENT:  UPDATE USUARIO SET CPF = $1 WHERE (ID = $2)
+2018-05-28 17:55:43 BRT sempreufg sempreufg ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2018-05-28 17:55:43 BRT sempreufg sempreufg STATEMENT:  SELECT 1

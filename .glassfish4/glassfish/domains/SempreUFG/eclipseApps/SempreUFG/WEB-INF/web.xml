@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	
+    <display-name>SempreUFG</display-name>
+	
+	<!-- JSF -->
+	
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.xhtml</param-value>
+    </context-param>   
+      
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+	
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Theme -->
+    
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>bootstrap</param-value>
+	</context-param>
+	
+	<!-- Security -->
+	
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>view/login.xhtml</welcome-file>
+    </welcome-file-list>
+    
+    <login-config>
+	<auth-method>FORM</auth-method>
+        <realm-name>jdbc-realm</realm-name>
+	<form-login-config>
+		<form-login-page>/view/login.xhtml</form-login-page>
+		<form-error-page>/view/login.xhtml</form-error-page>
+	</form-login-config>
+    </login-config>
+	
+    <security-role>
+        <description/>
+        <role-name>usuario</role-name>
+    </security-role>
+	
+    <security-constraint>
+        <display-name>Restrito a usuários</display-name>
+        <web-resource-collection>
+            <web-resource-name>Restrito</web-resource-name>
+            <url-pattern>/view/usuario/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>usuario</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+		<transport-guarantee>NONE</transport-guarantee>
+	</user-data-constraint>
+    </security-constraint>
+    
+    <security-role>
+        <description/>
+        <role-name>gestor</role-name>
+    </security-role>
+    
+    <security-constraint>
+        <display-name>Restrito a gestores</display-name>
+        <web-resource-collection>
+            <web-resource-name>Restrito</web-resource-name>
+            <url-pattern>/view/gestor/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>gestor</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+		<transport-guarantee>NONE</transport-guarantee>
+	</user-data-constraint>
+    </security-constraint>
+</web-app>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login | SempreUFG</title>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/bootstrap.min.css"></link>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/global.css"></link>
+</h:head>
+<h:body class="short-centered">
+
+	<!-- Cabeçalho -->
+	<div class="ui-g">
+		<!-- Branding -->
+		<div class="ui-g-3">
+			<h1 style="margin: auto;">SempreUFG</h1>
+		</div>
+	</div>
+
+	<hr></hr>
+
+	<h:form>
+		<p:panel id="basic" header="Login" style="margin-bottom:20px">
+			<p:messages autoUpdate="true" />
+			<h:panelGrid columns="2">
+				<p:outputLabel for="email">E-mail:</p:outputLabel>
+				<p:inputText id="email" value="#{loginController.email}"
+					required="true" requiredMessage="Por favor preencha o e-mail"></p:inputText>
+
+				<p:outputLabel for="senha">Senha:</p:outputLabel>
+				<p:password id="senha" value="#{loginController.senha}"
+					required="true" requiredMessage="Por favor preencha a senha"></p:password>
+
+				<h:commandButton id="loginButton"
+					action="#{loginController.doLogin}" value="Login" />
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+	<hr></hr>
+	<h:link value="Solicitar divulgação de evento"
+		outcome="/view/solicitante/solicitar" />
+</h:body>
+</html>

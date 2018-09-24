@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Eventos | SempreUFG</title>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/bootstrap.min.css"></link>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/global.css"></link>
+</h:head>
+<h:body class="large-centered">
+
+	<!-- Cabeçalho -->
+	<div class="ui-g">
+
+		<!-- Branding -->
+		<div class="ui-g-3">
+			<h1 style="margin: auto;">SempreUFG</h1>
+		</div>
+
+		<!-- Painel superior -->
+		<div class="ui-g-9">
+			<h2 style="display: block; text-align: right;">Usuário</h2>
+			<h:form style="display: block; text-align: right;">
+				<h:link value="Home" outcome="/view/usuario/home.xhtml" /> | 
+				<h:link value="Mensagens" outcome="/view/usuario/home.xhtml" /> | 
+				<h:commandLink value="Logout" action="#{loginController.doLogout}" />
+			</h:form>
+		</div>
+	</div>
+
+	<hr></hr>
+
+	<!-- Corpo -->
+	<div class="ui-g">
+
+		<!-- Barra esquerda -->
+		<div class="ui-g-3">
+			<h:form>
+				<p:menu toggleable="true" style="width: 100%;">
+					<p:submenu label="Eventos">
+						<p:menuitem value="Ver eventos" url="/view/usuario/eventos.xhtml"
+							icon="ui-icon-info" />
+					</p:submenu>
+					<p:submenu label="Consultas">
+					</p:submenu>
+					<p:submenu label="Configurações">
+						<p:menuitem value="Alterar dados cadastrais"
+							url="/view/usuario/dados.xhtml" icon="ui-icon-gear" />
+					</p:submenu>
+				</p:menu>
+			</h:form>
+		</div>
+
+		<!-- Conteúdo -->
+		<div class="ui-g-9">
+			<h:form>
+				<p:panel id="basic" header="Eventos" style="margin-bottom:20px">
+					<hr></hr>
+					<ui:repeat value="#{eventosController.eventosAprovados}"
+						var="evento">
+						<h4>
+							<h:outputText name="assunto" value="#{evento.assunto}" />
+						</h4>
+						<p>
+							<h:outputText name="descricao" value="#{evento.descricao}" />
+						</p>
+						<hr></hr>
+					</ui:repeat>
+				</p:panel>
+			</h:form>
+		</div>
+	</div>
+
+</h:body>
+</html>

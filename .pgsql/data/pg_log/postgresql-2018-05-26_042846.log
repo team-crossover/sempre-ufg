@@ -1,0 +1,8 @@
+2018-05-26 04:28:46 BRT   LOG:  database system was shut down at 2018-05-26 04:28:45 BRT
+2018-05-26 04:28:46 BRT   LOG:  database system is ready to accept connections
+2018-05-26 04:28:46 BRT   LOG:  autovacuum launcher started
+2018-05-26 04:32:02 BRT   LOG:  received fast shutdown request
+2018-05-26 04:32:02 BRT   LOG:  aborting any active transactions
+2018-05-26 04:32:02 BRT   LOG:  autovacuum launcher shutting down
+2018-05-26 04:32:02 BRT   LOG:  shutting down
+2018-05-26 04:32:02 BRT   LOG:  database system is shut down

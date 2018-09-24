@@ -1,0 +1,121 @@
+2018-05-30 01:46:46 BRT sempreufg sempreufg ERROR:  value too long for type character varying(255)
+2018-05-30 01:46:46 BRT sempreufg sempreufg STATEMENT:  UPDATE "public"."evento" SET "id"='101', "aprovado"=TRUE, "assunto"='UFG está entre as 20 melhores instituições Sul-Americanas em Ciências da Terra e Ambientais', "avaliado"=TRUE, "descricao"='Universidade Federal de Goiás é a melhor colocada entre as instituições do Centro-Oeste
+	
+	A Universidade Federal de Goiás (UFG) está entre as 20 melhores instituições Sul-Americanas no que diz respeito às produções na área de Ciências da Terra e Ambientais. O ranking é do Nature Index, um banco de dados sobre publicações, autorias e produtividade dos pesquisadores.
+	
+	Os dados do Nature Index são atualizados a cada ano. A UFG ficou na 11º posição na última avaliação, sendo a melhor colocada entre as instituições do Centro-Oeste brasileiro. ', "emailsolicitante"='marizasantos@ufg.br', "nomesolicitante"='Mariza Fernandes Santos' WHERE "id"='101'
+2018-05-30 01:49:30 BRT sempreufg sempreufg ERROR:  value too long for type character varying(500)
+2018-05-30 01:49:30 BRT sempreufg sempreufg STATEMENT:  UPDATE "public"."evento" SET "id"='101', "aprovado"=TRUE, "assunto"='UFG está entre as 20 melhores instituições Sul-Americanas em Ciências da Terra e Ambientais
+	', "avaliado"=TRUE, "descricao"='Universidade Federal de Goiás é a melhor colocada entre as instituições do Centro-Oeste
+	
+	A Universidade Federal de Goiás (UFG) está entre as 20 melhores instituições Sul-Americanas no que diz respeito às produções na área de Ciências da Terra e Ambientais. O ranking é do Nature Index, um banco de dados sobre publicações, autorias e produtividade dos pesquisadores.
+	
+	Os dados do Nature Index são atualizados a cada ano. A UFG ficou na 11º posição na última avaliação, sendo a melhor colocada entre as instituições do Centro-Oeste brasileiro. ', "emailsolicitante"='marizasantos@ufg.br', "nomesolicitante"='Mariza Fernandes Santos' WHERE "id"='101'
+2018-05-30 01:55:50 BRT sempreufg sempreufg ERROR:  value too long for type character varying(11)
+2018-05-30 01:55:50 BRT sempreufg sempreufg STATEMENT:  UPDATE USUARIO SET CPF = $1, GENERO = $2 WHERE (ID = $3)
+2018-05-30 01:55:50 BRT sempreufg sempreufg ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2018-05-30 01:55:50 BRT sempreufg sempreufg STATEMENT:  SELECT 1
+2018-05-30 03:18:17 BRT sempreufg sempreufg ERROR:  column "procpid" does not exist at character 96
+2018-05-30 03:18:17 BRT sempreufg sempreufg STATEMENT:  
+					SELECT * FROM pg_catalog.pg_stat_activity
+					WHERE datname='sempreufg' ORDER BY usename, procpid
+2018-05-30 03:18:21 BRT sempreufg sempreufg ERROR:  column "procpid" does not exist at character 96
+2018-05-30 03:18:21 BRT sempreufg sempreufg STATEMENT:  
+					SELECT * FROM pg_catalog.pg_stat_activity
+					WHERE datname='sempreufg' ORDER BY usename, procpid
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "evento" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE evento (
+	
+	    id integer NOT NULL,
+	
+	    aprovado boolean,
+	
+	    assunto character varying(255),
+	
+	    avaliado boolean,
+	
+	    descricao character varying(500),
+	
+	    emailsolicitante character varying(255),
+	
+	    nomesolicitante character varying(255)
+	
+	);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "papel" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE papel (
+	
+	    id bigint NOT NULL,
+	
+	    email character varying(255) NOT NULL,
+	
+	    papel character varying(255) NOT NULL
+	
+	);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "sequence" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE sequence (
+	
+	    seq_name character varying(50) NOT NULL,
+	
+	    seq_count numeric(38,0)
+	
+	);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "usuario" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE usuario (
+	
+	    id bigint NOT NULL,
+	
+	    cpf character varying(11),
+	
+	    email character varying(255) NOT NULL,
+	
+	    senha character varying(255) NOT NULL,
+	
+	    nome character varying(255),
+	
+	    recebedivulgacao boolean,
+	
+	    datanascimento date,
+	
+	    genero character varying(1)
+	
+	);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "evento_pkey"
+2018-05-30 03:20:35 BRT sempreufg sempreufg DETAIL:  Key (id)=(351) already exists.
+2018-05-30 03:20:35 BRT sempreufg sempreufg CONTEXT:  COPY evento, line 1
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  COPY evento (id, aprovado, assunto, avaliado, descricao, emailsolicitante, nomesolicitante) FROM stdin;
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "papel_pkey"
+2018-05-30 03:20:35 BRT sempreufg sempreufg DETAIL:  Key (id)=(1) already exists.
+2018-05-30 03:20:35 BRT sempreufg sempreufg CONTEXT:  COPY papel, line 1
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  COPY papel (id, email, papel) FROM stdin;
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "sequence_pkey"
+2018-05-30 03:20:35 BRT sempreufg sempreufg DETAIL:  Key (seq_name)=(SEQ_GEN) already exists.
+2018-05-30 03:20:35 BRT sempreufg sempreufg CONTEXT:  COPY sequence, line 1
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  COPY sequence (seq_name, seq_count) FROM stdin;
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  duplicate key value violates unique constraint "usuario_pkey"
+2018-05-30 03:20:35 BRT sempreufg sempreufg DETAIL:  Key (id)=(1) already exists.
+2018-05-30 03:20:35 BRT sempreufg sempreufg CONTEXT:  COPY usuario, line 1
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  COPY usuario (id, cpf, email, senha, nome, recebedivulgacao, datanascimento, genero) FROM stdin;
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  multiple primary keys for table "evento" are not allowed
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY evento
+	
+	    ADD CONSTRAINT evento_pkey PRIMARY KEY (id);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "papel_email_key" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY papel
+	
+	    ADD CONSTRAINT papel_email_key UNIQUE (email);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  multiple primary keys for table "papel" are not allowed
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY papel
+	
+	    ADD CONSTRAINT papel_pkey PRIMARY KEY (id);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  multiple primary keys for table "sequence" are not allowed
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY sequence
+	
+	    ADD CONSTRAINT sequence_pkey PRIMARY KEY (seq_name);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  relation "usuario_email_key" already exists
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY usuario
+	
+	    ADD CONSTRAINT usuario_email_key UNIQUE (email);
+2018-05-30 03:20:35 BRT sempreufg sempreufg ERROR:  multiple primary keys for table "usuario" are not allowed
+2018-05-30 03:20:35 BRT sempreufg sempreufg STATEMENT:  ALTER TABLE ONLY usuario
+	
+	    ADD CONSTRAINT usuario_pkey PRIMARY KEY (id);

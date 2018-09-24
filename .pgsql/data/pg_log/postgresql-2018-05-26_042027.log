@@ -1,0 +1,22 @@
+2018-05-26 04:20:27 BRT   LOG:  database system was shut down at 2018-05-26 04:20:26 BRT
+2018-05-26 04:20:27 BRT   LOG:  database system is ready to accept connections
+2018-05-26 04:20:27 BRT   LOG:  autovacuum launcher started
+2018-05-26 04:21:29 BRT root root FATAL:  password authentication failed for user "root"
+2018-05-26 04:21:58 BRT postgres postgres ERROR:  database "sempreufg" does not exist
+2018-05-26 04:21:58 BRT postgres postgres STATEMENT:  grant all privileges on database sempreUfg to sempreUfg
+	;
+2018-05-26 04:22:09 BRT postgres postgres ERROR:  database "sempreUfg" does not exist
+2018-05-26 04:22:09 BRT postgres postgres STATEMENT:  grant all privileges on database "sempreUfg" to "sempreUfg"
+	;
+2018-05-26 04:22:36 BRT postgres postgres ERROR:  syntax error at or near "grant" at character 27
+2018-05-26 04:22:36 BRT postgres postgres STATEMENT:  create database sempreufg
+	grant all privileges on database "sempreUfg" to "sempreUfg"
+	;
+2018-05-26 04:24:40 BRT postgres postgres ERROR:  syntax error at or near "user" at character 8
+2018-05-26 04:24:40 BRT postgres postgres STATEMENT:  delete user sempreufg
+	;
+2018-05-26 04:28:45 BRT   LOG:  received fast shutdown request
+2018-05-26 04:28:45 BRT   LOG:  aborting any active transactions
+2018-05-26 04:28:45 BRT   LOG:  autovacuum launcher shutting down
+2018-05-26 04:28:45 BRT   LOG:  shutting down
+2018-05-26 04:28:45 BRT   LOG:  database system is shut down

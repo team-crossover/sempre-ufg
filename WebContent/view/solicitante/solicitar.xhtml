@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Solicitar evento | SempreUFG</title>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/bootstrap.min.css"></link>
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/global.css"></link>
+</h:head>
+
+<h:body class="medium-centered">
+
+	<!-- Cabeçalho -->
+	<div class="ui-g">
+
+		<!-- Branding -->
+		<div class="ui-g-3">
+			<h1 style="margin: auto;">SempreUFG</h1>
+		</div>
+
+		<!-- Painel superior -->
+		<div class="ui-g-9">
+			<h2 style="display: block; text-align: right;">Eventos</h2>
+			<h:form style="display: block; text-align: right;">
+				<h:link value="Login" outcome="/view/login.xhtml" />
+			</h:form>
+		</div>
+	</div>
+
+	<hr></hr>
+
+	<!-- Corpo -->
+	<div class="ui-g">
+
+		<!-- Conteúdo -->
+		<div class="ui-g-12">
+			<h:form>
+				<p:panel id="basic" header="Solicitar divulgação de evento">
+					<p:messages autoUpdate="true" />
+					<h:panelGrid>
+						<h4>Evento</h4>
+						<p:outputLabel for="assunto">Assunto do evento:</p:outputLabel>
+						<p:inputText id="assunto" value="#{solicitacoesController.assunto}"
+							required="true"
+							requiredMessage="Por favor preencha o assunto do evento"></p:inputText>
+
+						<p:outputLabel for="descricao">Descrição do evento:</p:outputLabel>
+						<p:inputTextarea id="descricao"
+							value="#{solicitacoesController.descricao}" required="true"
+							requiredMessage="Por favor preencha a descrição do evento"
+							rows="10" cols="50" counter="caracteres" maxlength="500"
+							counterTemplate="{0} caracteres restantes" autoResize="true"></p:inputTextarea>
+						<h:outputText id="caracteres" />
+
+						<br></br>
+						<h4>Solicitante</h4>
+						<p:outputLabel for="nome">Nome:</p:outputLabel>
+						<p:inputText id="nome"
+							value="#{solicitacoesController.nomeSolicitante}"></p:inputText>
+
+						<p:outputLabel for="email">E-mail:</p:outputLabel>
+						<p:inputText id="email"
+							value="#{solicitacoesController.emailSolicitante}" required="true"
+							requiredMessage="Por favor preencha o e-mail do solicitante"></p:inputText>
+							
+						<br></br>
+						<h:commandButton action="#{solicitacoesController.doSolicitar}"
+							value="Solicitar divulgação"></h:commandButton>
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</div>
+	</div>
+
+</h:body>
+</html>

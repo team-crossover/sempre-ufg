@@ -1,0 +1,34 @@
+2018-05-26 03:46:30 BRT   LOG:  database system was shut down at 2018-05-26 03:46:29 BRT
+2018-05-26 03:46:30 BRT   LOG:  database system is ready to accept connections
+2018-05-26 03:46:30 BRT   LOG:  autovacuum launcher started
+2018-05-26 03:48:28 BRT postgres postgres ERROR:  syntax error at or near "exit" at character 1
+2018-05-26 03:48:28 BRT postgres postgres STATEMENT:  exit
+	exit
+	exit;
+2018-05-26 03:55:37 BRT sempreUfg admin LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 03:55:37 BRT sempreUfg admin FATAL:  Ident authentication failed for user "admin"
+2018-05-26 03:56:03 BRT sempreUfg postgres LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 03:56:03 BRT sempreUfg postgres FATAL:  Ident authentication failed for user "postgres"
+2018-05-26 03:58:51 BRT postgres postgres ERROR:  role "nano" does not exist
+2018-05-26 03:58:51 BRT postgres postgres STATEMENT:  alter user nano with encrypted password 'admin';
+2018-05-26 03:59:05 BRT postgres postgres ERROR:  role "sempreufg" does not exist
+2018-05-26 03:59:05 BRT postgres postgres STATEMENT:  alter user sempreUfg  with encrypted password 'admin';
+2018-05-26 03:59:07 BRT postgres postgres ERROR:  role "sempreufg" does not exist
+2018-05-26 03:59:07 BRT postgres postgres STATEMENT:  alter user sempreUfg  with encrypted password 'admin';
+2018-05-26 03:59:28 BRT postgres postgres ERROR:  role "sempreufg" does not exist
+2018-05-26 03:59:28 BRT postgres postgres STATEMENT:  alter user sempreufg  with encrypted password 'admin';
+2018-05-26 03:59:35 BRT postgres postgres ERROR:  syntax error at or near "exit" at character 1
+2018-05-26 03:59:35 BRT postgres postgres STATEMENT:  exit;
+2018-05-26 04:01:24 BRT sempreufg_db sempreufg LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 04:01:24 BRT sempreufg_db sempreufg FATAL:  Ident authentication failed for user "sempreufg"
+2018-05-26 04:01:33 BRT sempreufg_db sempreufg LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 04:01:33 BRT sempreufg_db sempreufg FATAL:  Ident authentication failed for user "sempreufg"
+2018-05-26 04:01:56 BRT sempreufg_db sempreufg LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 04:01:56 BRT sempreufg_db sempreufg FATAL:  Ident authentication failed for user "sempreufg"
+2018-05-26 04:02:01 BRT sempreufg_db sempreufg LOG:  could not connect to Ident server at address "127.0.0.1", port 113: Connection refused
+2018-05-26 04:02:01 BRT sempreufg_db sempreufg FATAL:  Ident authentication failed for user "sempreufg"
+2018-05-26 04:06:58 BRT   LOG:  received fast shutdown request
+2018-05-26 04:06:58 BRT   LOG:  aborting any active transactions
+2018-05-26 04:06:58 BRT   LOG:  autovacuum launcher shutting down
+2018-05-26 04:06:58 BRT   LOG:  shutting down
+2018-05-26 04:06:59 BRT   LOG:  database system is shut down

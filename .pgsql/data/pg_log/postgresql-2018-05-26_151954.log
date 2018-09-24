@@ -1,0 +1,17 @@
+2018-05-26 15:19:54 BRT   LOG:  database system was interrupted; last known up at 2018-05-26 04:37:04 BRT
+2018-05-26 15:19:54 BRT   LOG:  database system was not properly shut down; automatic recovery in progress
+2018-05-26 15:19:54 BRT   LOG:  record with zero length at 0/17D8920
+2018-05-26 15:19:54 BRT   LOG:  redo is not required
+2018-05-26 15:19:54 BRT   LOG:  database system is ready to accept connections
+2018-05-26 15:19:54 BRT   LOG:  autovacuum launcher started
+2018-05-26 15:20:14 BRT postgres postgres ERROR:  syntax error at or near "psql" at character 1
+2018-05-26 15:20:14 BRT postgres postgres STATEMENT:  psql
+	;
+2018-05-26 15:41:09 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 49
+2018-05-26 15:41:09 BRT sempreufg sempreufg STATEMENT:  SELECT ID, PASSWORD, SIGNINGDATE, USERNAME FROM USUARIO
+2018-05-26 15:46:18 BRT sempreufg sempreufg ERROR:  relation "sequence" does not exist at character 22
+2018-05-26 15:46:18 BRT sempreufg sempreufg STATEMENT:  SELECT SEQ_NAME FROM SEQUENCE WHERE SEQ_NAME <> SEQ_NAME
+2018-05-26 15:46:32 BRT sempreufg sempreufg ERROR:  relation "sequence" already exists
+2018-05-26 15:46:32 BRT sempreufg sempreufg STATEMENT:  CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(38), PRIMARY KEY (SEQ_NAME))
+2018-05-26 15:56:03 BRT sempreufg sempreufg ERROR:  relation "usuario" does not exist at character 16
+2018-05-26 15:56:03 BRT sempreufg sempreufg STATEMENT:  SELECT ID FROM USUARIO WHERE ID <> ID
