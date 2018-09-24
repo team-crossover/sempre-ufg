@@ -4,6 +4,10 @@ Projeto "SempreUFG" da disciplina Arquitetura de Software do curso Engenharia de
 
 Alunos: Natália Lopes, Sofia Moraes e Nelson William.
 
+## Documentação
+
+A descrição arquitetural completa (bem como as apresentações das Sprints) encontram-se na [pasta do Google Drive](https://drive.google.com/open?id=1guxaoQO206zibiFeCEyuzGVLhktmJKyK).
+
 ## Screenshot
 
 ![Imagem](./.screenshots/dadosCadastrais.png)
