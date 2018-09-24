@@ -9,7 +9,7 @@ Esta seção descreve as configurações que foram feitas para desenvolver e imp
 
 ### Sistema operacional
 
-O protótipo foi desenvolvido e executado no sistema operacional **openSUSE 12** instalado numa máquina virtual no **VirtualBox**.
+O protótipo foi desenvolvido e executado no sistema operacional **openSUSE 12** instalado numa máquina virtual no **VirtualBox**. Este repositório contém um backup do [arquivo de configuração da máquina virtual](../.virtualBox/Arquitetura.vbox).
 
 ### Banco de dados
 
