@@ -1,8 +1,8 @@
 # SempreUFG
 
-Projeto "SempreUFG" da disciplina Arquitetura de Software do curso Engenharia de Software (UFG 2018/1).
+Projeto arquitetural (com prova de conceito) para plataforma que une a UFG aos seus ex-discentes.
 
-Alunos: Natália Lopes, Sofia Moraes e Nelson William.
+Trabalho feito para a disciplina de Arquitetura de Software, do semestres 2018-1, do curso de graduação em Engenharia de Software da Universidade Federal de Goiás.
 
 ## Documentação
 
